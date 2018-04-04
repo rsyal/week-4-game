@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div>
+           <h1>Cyrstals Collector!</h1>
+        </div>
+    </div>
+
+    <div class="container" id="instructions">
+        <div>
+           <p>You will be given a random number at the start of the game.</p>
+           <p>There are four crystals below. By clicking on a crytsal you will add a specific 
+               amount of points to your total score.
+           </p>
+           <p>You will the game by matching your total score to the random number.
+               You lose the game if your total score goes above the random number.
+           </p>
+           <p>The value of each crystal is hidden from you until you click on it.</p>
+           <p>Each time when the game starts, th egame will hcange the values of each crystal.</p>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class ="buttons col-md-4" id="crystals">
+                <button>
+                   <img src="assets/images/red.jpg" width="100px" height="100px" id="red">
+                </button>
+                <button>
+                   <img src="assets/images/green.jpg" width="100px" height="100px" id="green">
+                </button>
+                <button>
+                   <img src="assets/images/yellow.jpg" width="100px" height="100px" id="yellow">
+                </button>
+                <button>
+                   <img src="assets/images/blue.jpg" width="100px" height="100px" id="blue">
+                </button> 
+             </div>
+    </div>
+
+    <div class="container" id="scoreboard">
+            <h3 id="wins">Wins:  </h3>
+            <h3 id="losses">Losses:  </h3> 
+    </div>
+    
+
+    <div class="container" id="randomnumber">
+        <h3>Goal Number</h3>
+    </div>
+
+    <div class="container" id="totalcount">
+        <div class="col-md-8" class="value">
+        <h5>Your total score is </h5>
+</div>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-md-2" id="randomnumber" >
+       Goal Number:
+      </div>
+      <div class="col-sm"  id="scoreboard" id="wins">
+        Wins:
+      </div>
+      <div class="col-sm" id="scoreboard" id="losses" >
+        Losses:
+       </div>
+      <div class="col-sm" id="totalcount" class="value">
+        Total Score
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+<script>
+
+        //variables
+
+                var randomNumber
+                var totalScore = 0;
+                var wins = 0;
+                var losses = 0;
+                var blue = 0;
+                var red = 0;
+                var yellow = 0;
+                var green = 0;
+                var blue = Math.floor((Math.random()* 12) + 1);
+                var red = Math.floor((Math.random()* 12) + 1);
+                var yellow = Math.floor((Math.random()* 12) + 1);
+                var green = Math.floor((Math.random()* 12) + 1);
+
+        // document ready function
+
+            $(document).ready(function () {
+        
+
+        // Make random number
+            function random(max,min){
+            return Math.floor(Math.random()*(max-min+1))+min;}
+
+
+        // Display wins and losses
+            $ ("#Wins").text(wins);
+            $ ("#losses").text(losses);
+
+        function startGame () {
+            totalScore = 0;
+            blue=0;
+            red=0;
+            yellow=0;
+            green=0;
+            randomNumber= random();
+            $(".value").text(randomNumber);
+        }
+
+        $("#red").click(function (e) {
+            red=random(12,1);
+         $("#totalcount").text($(this).text());
+         $("#totalcount").on("click", function(){
+        var sum = totalcount+;
+        }
+        });
+
+
+
+
+}
+
+// Functions
+//     add value to the crystals
+//     start game
+//     check to see if player wins or losses
+
+    
+
+
+</script>
+
+
+</body>
+</html>
+
+

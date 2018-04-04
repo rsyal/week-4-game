@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://www.pexels.com/photo/full-frame-shot-of-snowflakes-326240/) no-repeat fixed center;
+    width: 960px;
+}
+
+h1 {
+    background-color: aqua;
+    color: black;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    padding: 20px;
+    border: solid 1px black;
+	border-radius: 20px;
+}
+
+#instructions {
+    color: black;
+    border: solid 1px black;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 50%;
+
+}
+
+#scoreboard {
+    color: black;
+    border: solid 1px black;
+    background-color: aqua;
+    width: 20%;
+    height: 20%;
+    margin-top: 10px;
+}
+
+#totalcount {
+        color: black;
+        border: solid 1px black;
+        background-color: yellowgreen;
+        width: 20%;
+
+    }
+
+#randomnumber {
+    color: black;
+    border: solid 1px black;
+    background-color: rgb(205, 138, 50);
+    width: 20%;
+    
+}
