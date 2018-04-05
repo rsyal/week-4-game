@@ -25,9 +25,6 @@ body {
     border: solid 1px;
 }
 
-#totalCount {
-    margin-right: 0%
-}
 
 
 #instructions {
@@ -37,30 +34,30 @@ body {
     text-align: center;
 }
 
-#scoreboard {
+/* #scoreboard {
     color: black;
     border: solid 1px black;
-    background-color: aqua;
     width: 20%;
     height: 20%;
     margin-top: 10px;
-}
+} */
 
-#totalcount {
+/* #totalcount {
         color: black;
         border: solid 1px black;
         background-color: yellowgreen;
-        width: 20%;
+        width: 10%;
+        padding-bottom: 1px;
 
-    }
+    } */
 
-#randomnumber {
+/* #randomnumber {
     color: black;
     border: solid 1px black;
     background-color: rgb(205, 138, 50);
     width: 20%;
     
-} 
+}  */
 
 #red, #green, #yellow, #blue {
     margin-top: 6px;
