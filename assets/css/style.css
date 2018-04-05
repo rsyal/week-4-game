@@ -1,26 +1,40 @@
 body {
-    background-image: url(https://www.pexels.com/photo/full-frame-shot-of-snowflakes-326240/) no-repeat fixed center;
-    width: 960px;
+    background-image: url(https://images.pexels.com/photos/313563/sand-pattern-wave-texture-313563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350);
+
 }
 
-h1 {
+#header {
     background-color: aqua;
     color: black;
+    text-align: center;
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
-    display: inline-block;
     padding: 20px;
     border: solid 1px black;
-	border-radius: 20px;
+	margin: 1%;
+
+
 }
+
+
+#scoreBoard, #totalCount, #randomNumber {
+    width:33%;
+    float: left;
+    margin: 1%;
+    border-color: black;
+    border: solid 1px;
+}
+
+#totalCount {
+    margin-right: 0%
+}
+
 
 #instructions {
     color: black;
     border: solid 1px black;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     text-align: center;
-    width: 50%;
-
 }
 
 #scoreboard {
@@ -46,4 +60,12 @@ h1 {
     background-color: rgb(205, 138, 50);
     width: 20%;
     
+} 
+
+#red, #green, #yellow, #blue {
+    margin-top: 6px;
+    margin-right: 20px;
+    padding: 10px 0px 5px 0px;
+    height: 100px;
+    width: 200px;
 }

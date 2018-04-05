@@ -23,13 +23,13 @@
     <div class="container">
         
         <div>
-           <h1>Cyrstals Collector!</h1>
+           <h1 id="header">Cyrstals Collector!</h1>
         </div>
     </div>
 
     <div class="container" id="instructions">
         <div>
-           <p>You will be given a random number at the start of the game.</p>
+           <p> <strong>You will be given a random number at the start of the game.</p>
            <p>There are four crystals below. By clicking on a crytsal you will add a specific 
                amount of points to your total score.
            </p>
@@ -37,7 +37,7 @@
                You lose the game if your total score goes above the random number.
            </p>
            <p>The value of each crystal is hidden from you until you click on it.</p>
-           <p>Each time when the game starts, th egame will hcange the values of each crystal.</p>
+           <p>Each time when the game starts, th egame will hcange the values of each crystal.</strong></p>
         </div>
     </div>
 
@@ -58,21 +58,22 @@
              </div>
     </div>
 
-    <div class="container" id="scoreboard">
+<div id="content">
+    <div id="scoreBoard">
             <h3 id="wins">Wins:  </h3>
             <h3 id="losses">Losses:  </h3> 
     </div>
     
 
-    <div class="container" id="randomNumber">
-        <h3>Goal Number</h3>
+    <div id="randomNumber">
+        <h3>Goal Number: </h3>
     </div>
 
-    <div class="container" id="totalCount">
-        <div class="col-md-8" class="value">
-        <h5>Your total score is </h5>
+    <div id="totalCount" class="value">
+        <h3>Your total score is </h3>
+    </div>
 </div>
-</div>
+
 
 <!-- <div class="container">
     <div class="row">
@@ -103,10 +104,7 @@
                 var value = 0;
                 var wins = 0;
                 var losses = 0;
-                var blue = 0;
-                var red = 0;
-                var yellow = 0;
-                var green = 0;
+            
 
         // Document ready function
 
@@ -115,26 +113,28 @@
 
         // Make and Display random number
         var randomNumber = Math.floor(Math.random() * 102) + 19; 
-		$("#randomNumber").html(randomNumber); 
+		$("#randomNumber").html("Here is your goal " + randomNumber); 
 
         // Functions of the game
 
-        function youWin() {
-            alert("You are a winner!");
-            wins++; 
-            $("#wins").text(wins);
+        // function youWin() {
+        //     alert("You are a winner!");
+        //     wins++; 
+        //     $("#wins").text(wins);
 
-        }
+        // }
 
-        function youLose() {
-            alert("You Lose, Try Again.");
-            losses ++;
-            $("#losses").text(losses);
+        // function youLose() {
+        //     alert("You Lose, Try Again.");
+        //     losses ++;
+        //     $("#losses").text(losses);
 
-        }
+        // }
 
         function resetGame() {
-            totalScore = 0;
+            value = 0;
+            $("#wins").text(wins);
+            $("#losses").text(losses);
             var randomNumber = Math.floor(Math.random() * 102) + 19; 
 		    $("#randomNumber").html(randomNumber); 
             red = Math.floor(Math.random() * 12)+ 1; 
@@ -146,78 +146,80 @@
 
         // Add value to crystals
 
-        var red = Math.floor(Math.random() * 12)+ 1; 
-        var green = Math.floor(Math.random() * 12)+ 1; 
-        var yellow = Math.floor(Math.random() * 12)+ 1; 
-        var blue = Math.floor(Math.random() * 12)+ 1; 
+            red = Math.floor(Math.random() * 12)+ 1; 
+            green = Math.floor(Math.random() * 12)+ 1; 
+            yellow = Math.floor(Math.random() * 12)+ 1; 
+            blue = Math.floor(Math.random() * 12)+ 1; 
         
         // On click funtion for crystals
         $("#red").on("click", function() {
             value = value + red;
-            $("#totalCount").text(value);
+            $("#totalCount").text("Your total score is " + value);
                 if (value === randomNumber) {
-                    youWin(); 
+                    alert("You are a winner!");
+                    wins++; 
+                    $("#wins").text(wins);
                     resetGame();
-            
-              } else if (value != randomNumber) {
-                  function youLose() {
+            }   else if  (value > randomNumber) {
                     alert ("You lose!");
                     losses++;
                     $("#losses").text(losses);
                     resetGame();
                 }
-            }
+        
         });
 
         $("#blue").on("click", function() {
             value = value + blue;
-            $("#totalCount").text(value);
+            $("#totalCount").text("Your total score is " +value);
                 if (value === randomNumber) {
-                    youWin(); 
+                    alert("You are a winner!");
+                    wins++; 
+                    $("#wins").text(wins);
                     resetGame();
             
-              } else if (value != randomNumber) {
-                  function youLose() {
+              } else if  (value > randomNumber) {
                     alert ("You lose!");
                     losses++;
                     $("#losses").text(losses);
                     resetGame();
                 }
-            }
+            
         });
 
         $("#yellow").on("click", function() {
             value = value + yellow;
-            $("#totalCount").text(value);
+            $("#totalCount").text("Your total score is " +value);
                 if (value === randomNumber) {
-                    youWin(); 
+                    alert("You are a winner!");
+                    wins++; 
+                    $("#wins").text(wins);
                     resetGame();
             
-              } else if (value != randomNumber) {
-                  function youLose() {
+              } else if  (value > randomNumber) {
                     alert ("You lose!");
                     losses++;
                     $("#losses").text(losses);
                     resetGame();
                 }
-            }
+           
         });
 
         $("#green").on("click", function() {
             value = value + green;
-            $("#totalCount").text(value);
+            $("#totalCount").text("Your total score is " + value);
                 if (value === randomNumber) {
-                    youWin(); 
+                    alert("You are a winner!");
+                    wins++; 
+                    $("#wins").text(wins);
                     resetGame();
-            
-              } else if (value != randomNumber) {
-                  function youLose() {
+              } else if  (value > randomNumber) {
                     alert ("You lose!");
                     losses++;
                     $("#losses").text(losses);
                     resetGame();
                 }
-            }
+           
         });
 
         
