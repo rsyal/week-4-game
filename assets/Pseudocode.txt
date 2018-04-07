@@ -1,1 +1,37 @@
 Crystal Collector Game, week 4 homework
+
+1. Create HTML
+    crystals images
+2. Create CSS
+3. Create Javascript
+
+        Variables
+            value   
+            wins
+            losses
+
+4. The entire game is within the 
+        Document ready function
+            Computer generated random number 19-120
+            Add value to crystals 1-12
+
+            Functions 
+                resetGame
+                    set beginning value to 0
+                    crystals need new value with each try
+                    change computer generated random number each new game
+                    set DOM values (computer generated number and person's score (starts at 0))
+        
+            Crystals
+                red 
+                    on-click function, needs new value with each game
+                    if/else statement for wins and losses
+                blue
+                    on-click function, needs new value with each game
+                    if/else statement for wins and losses
+                green
+                    on-click function, needs new value with each game
+                    if/else statement for wins and losses
+                yellow
+                    on-click function, needs new value with each game
+                    if/else statement for wins and losses

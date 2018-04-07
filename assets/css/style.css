@@ -17,14 +17,13 @@ body {
 }
 
 
-#scoreBoard, #totalCount, #randomNumber {
+#totalCount, #randomNumber {
     width:33%;
     float: left;
     margin: 1%;
     border-color: black;
     border: solid 1px;
 }
-
 
 
 #instructions {

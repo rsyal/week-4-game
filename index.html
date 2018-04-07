@@ -57,13 +57,17 @@
                 </button> 
              </div>
     </div>
-
 <div id="content">
-    <div id="scoreBoard">
-            <h3 id="wins">Wins:  </h3>
-            <h3 id="losses">Losses:  </h3> 
-    </div>
-    
+
+    <div>
+        <h3>Wins: </h3>
+        <span id="wins"></span>
+      </div>
+
+      <div>
+        <h3>Losses: </h3>
+        <span id="losses"></span>
+      </div>
 
     <div id="randomNumber"></div>
 
@@ -80,11 +84,7 @@
                 var value = 0;
                 var wins = 0;
                 var losses = 0;
-                // var red;
-                // var green;
-                // var blue;
-                // var yellow;
-            
+   
 
         // Document ready function
 
@@ -107,11 +107,6 @@
 		    $("#randomNumber").html("Here is your goal number " + randomNumber);
             $(".value").html("Your current score is " + value); 
 
-            // $("#totalCount").text ("Total number count starts at 0");
-            // $("#wins").text(wins);
-            
-		   
-            // $("#losses").text(losses); -->
             
             
         }
